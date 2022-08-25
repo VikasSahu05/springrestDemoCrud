@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 import com.techment.entity.Product;
 import com.techment.repository.ProductRepository;
 
+/**
+ * @author 🆅🅸🅺🅰🆂
+ *
+ */
 @Service
 public class ProductService {
 	
@@ -39,6 +43,15 @@ public class ProductService {
 		 repository.deleteById(id);
 		return "Product Removed !!"+id;
 	}
+	
+	/*
+	 * @Authod: Vikas Kumar Sahu
+	 * @Description : this method is used to update the product by giving the product id
+	 * @param :It  takes id and product as a parameter
+	 * @return : it return products
+	 * @created Date :25 Aug 2022
+	 * 
+	 * */
 	
 	public Product updateProduct(Product product) {
 		Product existingProduct = repository.findById(product.getId()).orElse(null);
